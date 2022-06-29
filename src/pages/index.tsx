@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Footer, Header, Main, Page } from '../components/Common'
 import { BrandH, H1, P } from '../components/Text'
 import { Section } from '../components/Section'
+import { Theme } from '../components/Theme/Index'
 
 const Home: NextPage = () => {
   return (
@@ -19,12 +20,13 @@ const Home: NextPage = () => {
         <BrandH>
           <Link href="/"> Playground </Link>
         </BrandH>
+        <Theme/>
       </Header>
 
       <Main>
         <Section>
           <H1>Playground Place</H1>
-          <P>A place to test and improve your skills</P>
+          <P>A place to test and improve my skills</P>
         </Section>
       </Main>
       <Footer>
