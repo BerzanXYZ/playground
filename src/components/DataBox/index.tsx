@@ -1,11 +1,12 @@
+import { useContext } from 'react'
 import tailt from 'tailt'
+import { NameContext } from '../../contexts/NameContext'
 
 // "DataBox" component that display some data
 export function DataBox() {
+    const name = useContext(NameContext)
     return (
-        <Div>
-            Hello
-        </Div>
+        <Div>{name}</Div>
     )
 }
 
