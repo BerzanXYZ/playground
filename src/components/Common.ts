@@ -16,7 +16,7 @@ export const Header = tailt.header`
 
 export const Main = tailt.main`
     flex flex-col items-center
-    flex-1
+    flex-1 py-10
 `
 
 export const Footer = tailt.footer`

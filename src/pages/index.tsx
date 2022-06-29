@@ -3,7 +3,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Footer, Header, Main, Page } from '../components/Common'
-import { BrandH } from '../components/Heading'
+import { BrandH, H1, P } from '../components/Text'
+import { Section } from '../components/Section'
 
 const Home: NextPage = () => {
   return (
@@ -21,9 +22,10 @@ const Home: NextPage = () => {
       </Header>
 
       <Main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <Section>
+          <H1>Playground Place</H1>
+          <P>A place to test and improve your skills</P>
+        </Section>
       </Main>
       <Footer>
 
