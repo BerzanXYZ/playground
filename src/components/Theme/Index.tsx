@@ -1,5 +1,4 @@
-import { exitCode } from 'process'
-import { MouseEvent, useRef, useState } from 'react'
+import { useState } from 'react'
 import tailt from 'tailt'
 import useMode from 'usemode'
 
@@ -12,12 +11,11 @@ export const Theme = () => {
         <Dropdown onClick={() => setOpen(!isOpen)}>
             <Button >Theme</Button>
             {isOpen &&
-                <Menu>
-                    <Item onClick={mode.setSystem}>System</Item>
-                    <Item onClick={mode.setDark}>Dark</Item>
-                    <Item onClick={mode.setLight}>Light</Item>
-                </Menu>
-            }
+            <Menu>
+                <Item onClick={mode.setSystem}>System</Item>
+                <Item onClick={mode.setDark}>Dark</Item>
+                <Item onClick={mode.setLight}>Light</Item>
+            </Menu>}
         </Dropdown>
     )
 }
