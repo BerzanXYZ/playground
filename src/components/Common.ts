@@ -22,8 +22,8 @@ export const Main = tailt.main`
 `
 
 export const Footer = tailt.footer`
-    flex items-center justify-between
-    h-40
+    flex flex-col sm:flex-row sm:justify-center
+    px-10 py-14 gap-y-8 gap-x-40
     bg-zinc-900 text-white
     dark:bg-white dark:text-zinc-900
 `
