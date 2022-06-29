@@ -18,7 +18,7 @@ export const Header = tailt.header`
 
 export const Main = tailt.main`
     flex flex-col items-center
-    flex-1 py-10
+    flex-1 py-10 gap-y-6
 `
 
 export const Footer = tailt.footer`
