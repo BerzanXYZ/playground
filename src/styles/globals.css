@@ -8,3 +8,8 @@ html,
 body {
   font-family: 'Inter', sans-serif;
 }
+
+::selection {
+  color: white;
+  background-color: #18181B;
+}
