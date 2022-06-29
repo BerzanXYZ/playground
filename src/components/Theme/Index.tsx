@@ -1,22 +1,23 @@
 import { exitCode } from 'process'
-import { MouseEvent, useRef } from 'react'
+import { MouseEvent, useRef, useState } from 'react'
 import tailt from 'tailt'
 import useMode from 'usemode'
 
 // "Theme" component that handles theming stuff
 export const Theme = () => {
+    const [isOpen, setOpen] = useState<boolean>(false)
     const mode = useMode()
-    const menuRef = useRef<HTMLDivElement>(null)
-    function toggleMenu() { menuRef.current?.classList.toggle("hidden") }
 
     return (
-        <Dropdown onClick={toggleMenu}>
+        <Dropdown onClick={() => setOpen(!isOpen)}>
             <Button >Theme</Button>
-            <Menu ref={menuRef}>
-                <Item onClick={mode.setSystem}>System</Item>
-                <Item onClick={mode.setDark}>Dark</Item>
-                <Item onClick={mode.setLight}>Light</Item>
-            </Menu>
+            {isOpen &&
+                <Menu>
+                    <Item onClick={mode.setSystem}>System</Item>
+                    <Item onClick={mode.setDark}>Dark</Item>
+                    <Item onClick={mode.setLight}>Light</Item>
+                </Menu>
+            }
         </Dropdown>
     )
 }
@@ -38,7 +39,7 @@ const Button = tailt.button`
 
 // "Menu" for "Theme" component
 const Menu = tailt.div`
-    hidden absolute top-16
+    absolute top-16
     flex flex-col
     w-36 p-3 gap-y-1 rounded-lg
     bg-zinc-900
