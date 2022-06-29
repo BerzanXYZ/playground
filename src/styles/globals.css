@@ -13,3 +13,8 @@ body {
   color: white;
   background-color: #18181B;
 }
+
+.dark ::selection {
+  color: #18181B;
+  background-color: white;
+}
