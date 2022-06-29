@@ -35,14 +35,14 @@ const Home: NextPage = () => {
       </Main>
       <Footer>
         <FooterBox title='Social Media'>
-          <FooterItem href='/'>Twitter</FooterItem>
-          <FooterItem href='/'>GitHub</FooterItem>
-          <FooterItem href='/'>Discord</FooterItem>
+          <FooterItem href='https://twitter.com/BerzanXYZ'>Twitter</FooterItem>
+          <FooterItem href='https://github.com/BerzanXYZ'>GitHub</FooterItem>
+          <FooterItem href='https://discord.com/users/879386840719827014'>Discord</FooterItem>
         </FooterBox>
         <FooterBox title='Projects'>
-          <FooterItem href='/'>Tailt</FooterItem>
-          <FooterItem href='/'>useMode</FooterItem>
-          <FooterItem href='/'>Creta</FooterItem>
+          <FooterItem href='https://github.com/BerzanXyz/tailt'>Tailt</FooterItem>
+          <FooterItem href='https://github.com/BerzanXyz/usemode'>useMode</FooterItem>
+          <FooterItem href='https://github.com/BerzanXyz/creta'>Creta</FooterItem>
         </FooterBox>
       </Footer>
     </Page>

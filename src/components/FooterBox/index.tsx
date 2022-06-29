@@ -37,6 +37,6 @@ const FooterUL = tailt.ul`
 // "FooterItem" is the item for "FooterBox"
 export const FooterItem = ({children, href}: {children: string, href: string}) => (
     <li className='font-medium text-lg opacity-80'>
-        <Link href={href}>{children}</Link>
+        <a rel="noreferrer" target="_blank" href={href}>{children}</a>
     </li>
 )
