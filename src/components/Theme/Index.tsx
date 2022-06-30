@@ -8,14 +8,17 @@ export const Theme = () => {
     const mode = useMode()
 
     return (
-        <Dropdown onClick={() => setOpen(!isOpen)}>
-            <Button >Theme</Button>
+        <Dropdown>
+            <Button onClick={() => setOpen(!isOpen)}>Theme</Button>
             {isOpen &&
+            <>
+            <Cover onClick={() => setOpen(!isOpen)}/>
             <Menu>
-                <Item onClick={mode.setSystem}>System</Item>
-                <Item onClick={mode.setDark}>Dark</Item>
-                <Item onClick={mode.setLight}>Light</Item>
-            </Menu>}
+                <Item onClick={() => { mode.setSystem(); setOpen(!isOpen)} }>System</Item>
+                <Item onClick={() => { mode.setDark(); setOpen(!isOpen)} }>Dark</Item>
+                <Item onClick={() => { mode.setLight(); setOpen(!isOpen)} }>Light</Item>
+            </Menu>
+            </>}
         </Dropdown>
     )
 }
@@ -37,7 +40,7 @@ const Button = tailt.button`
 
 // "Menu" for "Theme" component
 const Menu = tailt.div`
-    absolute top-16
+    absolute top-16 z-30
     flex flex-col
     w-36 p-3 gap-y-1 rounded-lg
     bg-zinc-900
@@ -51,4 +54,9 @@ const Item = tailt.button`
     hover:bg-zinc-700
     dark:hover:bg-zinc-200
     duration-200
+`
+
+// "Cover" for covering whole page except "Droddown"
+const Cover = tailt.div`
+    fixed top-0 left-0 z-20 w-full h-full
 `
