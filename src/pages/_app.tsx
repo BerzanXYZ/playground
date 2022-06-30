@@ -1,12 +1,12 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { NameContext } from '../contexts/NameContext'
+import { CryptoContextProvider } from '../contexts/CryptoProvider'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <NameContext.Provider value='Zan'>
+    <CryptoContextProvider >
       <Component {...pageProps} />
-    </NameContext.Provider>
+    </CryptoContextProvider>
   )
 }
 

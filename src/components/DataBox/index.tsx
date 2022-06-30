@@ -1,20 +1,21 @@
-import { useContext } from 'react'
 import tailt from 'tailt'
-import { NameContext } from '../../contexts/NameContext'
+import { useCryptoContext } from '../../contexts/CryptoProvider'
 
 // "DataBox" component that display some data
 export function DataBox() {
-    const name = useContext(NameContext)
+    const { crypto, setCrypto } = useCryptoContext()
     return (
-        <Div>{name}</Div>
+        <Div>{crypto}</Div>
     )
 }
 
 // "Div" for "DataBox" component
 const Div = tailt.div`
-    flex flex-col
-    h-32 w-56
+    flex flex-col text-center justify-center
+    h-20 w-60
     p-3 rounded-xl
     bg-zinc-900 text-white
     dark:bg-white dark:text-zinc-900
+    duration-200 select-none
+    font-semibold text-xl
 `
